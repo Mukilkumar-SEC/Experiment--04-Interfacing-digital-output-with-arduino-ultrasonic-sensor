@@ -90,8 +90,11 @@ void loop()
 
 ```
 ### Output:
+## Before simulation
 
+![Screenshot 2023-05-10 183326](https://github.com/Mukilkumar-SEC/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/119559663/08de7171-5023-48c8-b0bd-40a086852ceb)
 
+## After simulation
 ![Screenshot 2023-05-10 182945](https://github.com/Mukilkumar-SEC/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/119559663/a7496fb6-df88-40b2-adf8-a9ecccfa5a7f)
 
 
