@@ -1,7 +1,7 @@
-# EXPERIMENT-NO--05-Distance measurement using Ultrasonic sensor
+# EXPERIMENT-NO--04-Distance measurement using Ultrasonic sensor
 
 ## AIM: 
-To interface an ultrasonic pair and measure the distance in centimeters , calculate the error
+To measure the distance of the given object using ultrasonic sensor(HC - SR04).
  
 ### COMPONENTS REQUIRED:
 1.	ultrasonic sensor module HC-SR04
@@ -55,39 +55,50 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 
 
 ### PROGRAM 
+```
+NAME: Mukil kumar v
+reg no: 212222230087
+```
+```
+#define echoPin 9
+#define trigPin 10
+
+long duration;
+int distance;
+
+void setup()
+{
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034/2;
+  
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+}
+
+```
+### Output:
 
 
-
-
-
-
-### Distance vs measurement table 
-
-			
- 
-			
-			
-			
-
-![image](https://user-images.githubusercontent.com/36288975/190135379-52ebacd5-ccd5-460f-a4cd-4d0ad1d9b179.png)
-
-			
-			
-			
-			
-			
-			Average error = sum/ number of readings 
- 
-
-
-
+![Screenshot 2023-05-10 182945](https://github.com/Mukilkumar-SEC/Experiment--04-Interfacing-digital-output-with-arduino-ultrasonic-sensor/assets/119559663/a7496fb6-df88-40b2-adf8-a9ecccfa5a7f)
 
 
 
 
 
 ### RESULTS
-
-
+Thus the distance value is measured in "CM" using ultrasonic sensor.
 
  
